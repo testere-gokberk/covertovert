@@ -6,8 +6,7 @@
 Basic ICMP Documentation
 ========================
 
-Please add your names and group ID here by editing `index.rst` in the docs folder.
-
+Eren Gökberk Halaçlı, Salim Eren Yılmaz - Group 71
 
 .. toctree::
    :maxdepth: 2
