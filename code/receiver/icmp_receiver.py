@@ -12,3 +12,4 @@ def handle_packet(packet):
 
 
 sniff(filter="icmp", prn=handle_packet)
+ 
