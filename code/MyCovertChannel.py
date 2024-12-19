@@ -51,15 +51,15 @@ class MyCovertChannel(CovertChannelBase):
             if bit == "1":
                 
                 base_dsap = 0xc0  
-                encoded_dsap = base_dsap | 0x01 if bit == '1' else base_dsap & 0xFE
+                encoded_dsap = base_dsap | 0x01
 
                 print("ENCODED DSAP with 1", hex(encoded_dsap))
 
                 #packet = LLC(dsap=encoded_dsap) / IP(dst="172.18.0.3") 
                 
                 #02:42:ac:12:00:03 ff:ff:ff:ff:ff:ff
-                                
-                packet = Ether(dst="ff:ff:ff:ff:ff:ff", src=own_mac) / LLC(dsap=encoded_dsap) / IP(dst="172.18.0.3") #/ LLC(dsap=encoded_dsap) 
+                # src=own_mac
+                packet = Ether(dst="ff:ff:ff:ff:ff:ff" ) / LLC(dsap=encoded_dsap) / IP(dst="172.18.0.3") #/ LLC(dsap=encoded_dsap) 
 
                 print("PACKET SENT ", packet.show(dump=True) , "\n PACKET BIT ", bit)
 
@@ -70,7 +70,7 @@ class MyCovertChannel(CovertChannelBase):
             else:
                 
                 base_dsap = 0xc0  
-                encoded_dsap = base_dsap | 0x01 if bit == '1' else base_dsap & 0xFE
+                encoded_dsap = base_dsap & 0xFE
 
                 print("ENCODED DSAP with 0", hex(encoded_dsap))
 
