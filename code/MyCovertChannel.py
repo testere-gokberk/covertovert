@@ -65,7 +65,7 @@ class MyCovertChannel(CovertChannelBase):
 
                 super().send(packet)
 
-                self.sleep_random_time_ms(start=1, end=5)        
+                
             
             else:
                 
@@ -79,8 +79,7 @@ class MyCovertChannel(CovertChannelBase):
                 print("PACKET SENT ", packet.show() , "\n PACKET BIT ", bit)
                 
                 super().send(packet)
-                
-                self.sleep_random_time_ms(start=1, end=5)        
+            
                         
             
     def get_current_mac(self):
