@@ -105,11 +105,6 @@ class MyCovertChannel(CovertChannelBase):
                     
                 self.binary_message += secret_bit
 
-                if self.convert_eight_bits_to_character(self.binary_message[-8:]) == ".":
-                    return True
-
-            return False
-
         def check_stop(packet):
             
             if packet.haslayer(LLC):             
