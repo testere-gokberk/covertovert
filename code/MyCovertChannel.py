@@ -107,15 +107,15 @@ class MyCovertChannel(CovertChannelBase):
         
         binary_message = self.generate_random_binary_message_with_logging(log_file_name,min_length=16,max_length=16)
         
-        print("BINARY MESSAGE")
+        #print("BINARY MESSAGE")
         
-        for i, bit in enumerate(binary_message):
+        #for i, bit in enumerate(binary_message):
             
-            print( binary_message[i: i+4], end=" ")
+        #    print( binary_message[i: i+4], end=" ")
                 
         binary_message = self.encode(binary_message)
         
-        print("ENCODED BINARY MESSAGE : ", binary_message)
+        #print("ENCODED BINARY MESSAGE : ", binary_message)
 
         own_mac = self.get_current_mac()
         #print("MAC OF THIS DEVICE ", own_mac)
