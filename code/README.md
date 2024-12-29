@@ -1,4 +1,4 @@
-# Replace with Your Covert Channel Name
+# Gökberk-Salim Covert Channel
 
 **Covert Channel**
 
