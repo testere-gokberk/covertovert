@@ -18,7 +18,7 @@ class MyCovertChannel(CovertChannelBase):
         """
         super().__init__()
            
-    def send(self, log_file_name, parameter1, parameter2):
+    def send(self, log_file_name):
         """
         - In this covert channel implementation, I am using DSAP field in the LLC header to send the secret message.
         - We process the message two bits by two bits and every possible two bit pattern corresponds to a range of dsap values:
@@ -74,7 +74,7 @@ class MyCovertChannel(CovertChannelBase):
         mac_address = get_if_hwaddr(conf.iface)
         return mac_address
         
-    def receive(self, parameter1, parameter2, parameter3, log_file_name):
+    def receive(self, log_file_name):
         """
         - To receive the covert channel message, we sniff the packets if the packet has an LLC header.
         - We extract two bits from each packet depending on the which range of dsap values it falls into:
